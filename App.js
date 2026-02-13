@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, TextInput } from 'react-native';
+import { StyleSheet, Text, View, Image, TextInput, useColorScheme } from 'react-native';
 
 export default function App() {
   return (
@@ -36,12 +36,16 @@ export default function App() {
         <View style={styles.createAccount}>
           <View style={styles.typeCreate}>
             <Image style={styles.google} source={require('./assets/google.png')} />
-            <Image style={styles.google} source={require('./assets/google.png')} />
-            <Image style={styles.google} source={require('./assets/google.png')} />
+            <Image style={styles.google} source={require('./assets/facebook.png')} />
+            <Image style={styles.google} source={require('./assets/github.png')} />
 
           </View>
+          <View style={styles.createAccountButton}>
+          <Text style={styles.createAccountText}>Create an account</Text>
+        </View>
 
         </View>
+        
 
 
 
@@ -122,18 +126,34 @@ const styles = StyleSheet.create({
 
   },
   typeCreate: {
-    width: 340,
-    height: 50,
-    marginTop: 30,
+    width: 350,
+    height: 60,
+    marginTop: 15,
     alignItems: 'center',
     justifyContent: 'center',
-    gap: 10,
+    gap: 35,
     flexDirection: 'row',
   },
   google: {
-    width: 35,
-    height: 35,
+    width: 45,
+    height: 45,
     
 
   },
+  createAccountButton: {
+    marginTop: 15,
+    backgroundColor: '#3b83c7',
+    width: 350,
+    height: 40,
+    borderRadius: 20,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
+
+  },
+  createAccountText: {
+    color: 'white'
+  }
+  
+
 });
